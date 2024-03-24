@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Recorder</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 4rem;
+        }
+
+        .startRecording {
+            color: red;
+        }
+
+        .main {
+            border: 1px solid grey;
+
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            max-width: 600px;
+            /* border:1px solid grey; */
+
+        }
+
+        button {
+            padding: 5px 20px;
+
+        }
+    </style>
+
+    
+</head>
+
+<body>
+
+    <div class="main">
+        <h3 class="startRecording" id="count"></h3>
+
+
+        <audio autoplay controls id="audioCtr"></audio>
+
+        <div class="btn-container">
+
+
+
+            <button id="start" onclick="startCall()">Start</button>
+            <button id="btnMuteUnmute" onclick="muteUnmute()" style="display: none;">Mute</button>
+            <button id="startRecording" onclick="startRecording()" style="display: none;">Start recording</button>
+            <button id="stopRecording" onclick="stopRecording()" style="display: none;">stop recording</button>
+            <button onclick="pause()" id="pause" style="display: none;">Pause</button>
+            <button onclick="resume()" id="resume" style="display: none;">Resume</button>
+            <a href="#" id="download" style="display: none;">Download</a>
+
+        </div>
+
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+
+</html>
